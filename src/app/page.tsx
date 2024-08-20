@@ -2,7 +2,8 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { SignIn, UserButton } from "@clerk/nextjs";
 import { auth } from "@clerk/nextjs/server";
-import { Link } from "lucide-react";
+import Link from "next/link";
+import { LogIn } from "lucide-react";
 
 export default  async function Home() {
   const {userId} = await  auth()
@@ -22,14 +23,15 @@ export default  async function Home() {
        
 )}  
         </div> 
-        <p className="text-slate-200 mt-2">Customise ton ai et obtient ton assistant personnel</p>
+        <p className="text-slate-200 mt-2">Customise ton <code>AI</code> et obtient ton assistant personnel</p>
          <div className="flex w-full mt-4">
-            {isAuth ?( <h1> upload</h1> ):
-            (
-              <Link href='/sign-in'><Button> Q&apos;est-ce qu&apos;on attends ? Connectez - vous !</Button>   
-              </Link>
-            )}
-         </div>
+          {isAuth ? ( <h1>Upload</h1> ):
+          (<Link href='/sign-in'> <Button className="ml-4"> Q&apos;est-ce qu&apos;on attends ? Connectez - vous !   
+          
+          <LogIn className=" w-4 h-4 ml-4" />
+          </Button></Link> )}
+        
+                     </div>
       </div>
     </div>
   );
