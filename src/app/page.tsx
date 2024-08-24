@@ -19,14 +19,14 @@ export default async function Home() {
           <UserButton afterSignOutUrl="/" />
         </div>
         <div className="mt-2 flex">
-          {isAuth && <Button className="ml-8 mb-3">Discutons !</Button>}
+          {isAuth && <Button className="ml-1 mb-3">Discutons !</Button>}
         </div>
         <p className="text-slate-200 mt-2">
           Customise ton <code>AI</code> et obtient ton assistant personnel
         </p>
         <div className="flex w-full mt-4">
           {isAuth ? (
-            <h1>Upload</h1>
+            <h1>Uploadfile</h1>
           ) : (
             <Link href="/sign-in">
               <Button className="ml-4">
