@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Button  } from "@/components/ui/button";
-import { SignIn, UserButton } from "@clerk/nextjs";
+import {UserButton } from "@clerk/nextjs";
 import { auth } from "@clerk/nextjs/server";
 import Link from "next/link";
 import { LogIn } from "lucide-react";
